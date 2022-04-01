@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html dir="ar" lang="ar">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>رمضان كريم | Mazin</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<meta property="og:url" content="https://mazn.co/ramadan">
+		<meta property="og:description" content="تهنئة خاصة لك بمناسبة شهر رمضان المبارك">
+		<meta property="og:title" content="رمضان كريم | Mazin">
+		<meta property="og:image" content="logomin.png">
+		<meta property="og:image:type" content="image/png">
+		<meta name="twitter:description" content="تهنئة خاصة لك بمناسبة شهر رمضان المبارك">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.16.0/sweetalert2.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.16.0/sweetalert2.all.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+		<style>
+			*{
+				font-family: 'Tajawal', sans-serif;
+
+			}
+			.ramadan{
+				animation-duration: 1s;
+				animation-name: pulse;
+				animation-iteration-count: infinite;
+				text-align: center;
+			}
+			#message{
+				text-align: center;
+				font-size: 20px;
+				color: gray;
+				padding:0 20px ;			
+			}
+			.fas{
+				color: gray;
+			}
+			button{
+				padding: 17px;
+				padding-top: 20px;
+				border-radius: 15px;
+				border: 0px;
+				font-size: 17px;
+				box-shadow: 0 0 7px #d0d0d0;
+				color: gray;
+			}
+			body{
+				background-color: #353535;
+				transition: all 0.5s ease;
+				margin: 0;
+				
+			}
+			.center{
+				text-align: center;
+			}
+			.header{
+				margin: 0px;
+				padding: 0px;
+				background-image:url(off.png); 
+				background-repeat:repeat-x;
+				height:165px;
+			}
+			footer{
+				position: static;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				color: gray;
+				font-family: 'Raleway', sans-serif;
+				font-size:12px;
+				margin-bottom:25px;
+			}
+			.yesss{
+			    animation-duration: 1.6s;
+				animation-name: pulse;
+				animation-iteration-count: infinite;
+			}
+		</style>
+	</head>
+	<body onload="start()" bgcolor="#353535">
+		
+		<div id="header" class="header">
+			
+		</div>
+		<audio id="beep" src="sound.mp3" autoPlay></audio>
+		
+		
+		
+		
+		<p class="ramadan">
+			<img  src="rmmm.png" height="200" style="color:blue">
+		</p>
+		
+		
+
+<p id="message"></p>
+
+
+
+
+
+
+
+<p class="center" id="btn"><button onclick="executeLamp()"><i class="fas fa-plug"></i> شغل الفوانيس</button></p>
+		
+		<div class="center arrow">
+			<img  src="arrow.png" height="100">
+			<br>
+			<img class="yesss"  src="quran.png" height="300">
+		</div>
+	<footer class="center">
+		Edited By <a href="https://twitter.com/ProAbdulrahmna" target="_blank" style="color: gray">Abdulrahman</a><br>
+        Created By <a href="https://twitter.com/itsMaz1n" target="_blank" style="color: gray">Mazen</a>
+	</footer>
+		<script>
+			function start() {
+				var txt;
+				var person = prompt("أهلاً ياليت تكتب اسمك عشان نكمل 🙈");
+				if (person == null || person == "") {
+					person = " ياغريب ";
+					txt =  "أهلاً شهر مبارك وكل سنة وإنت بخير يارب ينعاد عليك بصحة وعافية" ;
+				} else {
+					txt =  "أهلاً " + person + " شهر مبارك وكل سنة وإنت بخير يارب ينعاد عليك بصحة وعافية" ;
+				}
+				document.getElementById("message").innerHTML = txt;
+			}
+			function executeLamp() {
+				document.body.style.backgroundColor = "#e6e6e6";
+				document.getElementById("header").style.backgroundImage = "url('on.png')";
+				document.getElementById('beep').muted = false;
+				document.getElementById('beep').play();
+			}
+		</script>
+	</body>
+</html>
